@@ -1,0 +1,2846 @@
+@prefix : <http://www.semanticweb.org/patel/ontologies/2021/4/untitled-ontology-1#> .
+@prefix ITS: <http://www.semanticweb.org/patel/ontologies/2021/4/ITS#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@base <http://www.semanticweb.org/patel/ontologies/2021/4/ITS> .
+
+<http://www.semanticweb.org/patel/ontologies/2021/4/ITS> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Temporal
+ITS:Temporal rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#above
+ITS:above rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf ITS:spatial ;
+          owl:inverseOf ITS:below .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#accident
+ITS:accident rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#action
+ITS:action rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#after
+ITS:after rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf ITS:occurence .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#ahead
+ITS:ahead rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf ITS:spatial ;
+          owl:inverseOf ITS:behind ;
+          rdf:type owl:InverseFunctionalProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#along
+ITS:along rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#at
+ITS:at rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#before
+ITS:before rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:occurence .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#behind
+ITS:behind rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:spatial ;
+           rdf:type owl:InverseFunctionalProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#below
+ITS:below rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf ITS:spatial ;
+          rdf:type owl:InverseFunctionalProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#close
+ITS:close rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#crossing
+ITS:crossing rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#description
+ITS:description rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#distant
+ITS:distant rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:spatial ;
+            rdf:type owl:SymmetricProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#driving
+ITS:driving rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#during
+ITS:during rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:occurence .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#ends
+ITS:ends rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf ITS:occurence .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#entering
+ITS:entering rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#exiting
+ITS:exiting rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#for
+ITS:for rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#from
+ITS:from rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#goingOn
+ITS:goingOn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#hasDirection
+ITS:hasDirection rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#having
+ITS:having rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#hit
+ITS:hit rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#holding
+ITS:holding rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#in
+ITS:in rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#is
+ITS:is rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#jumpingOver
+ITS:jumpingOver rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#largerThan
+ITS:largerThan rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf ITS:spatial ;
+               owl:inverseOf ITS:smallerThan ;
+               rdf:type owl:InverseFunctionalProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#looking
+ITS:looking rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#moving
+ITS:moving rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#nearBy
+ITS:nearBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:spatial ;
+           rdf:type owl:SymmetricProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#notMoving
+ITS:notMoving rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#occurence
+ITS:occurence rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#of
+ITS:of rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#on
+ITS:on rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#open
+ITS:open rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#over
+ITS:over rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#overlapping
+ITS:overlapping rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf ITS:occurence .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#overlaps
+ITS:overlaps rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ITS:spatial ;
+             rdf:type owl:SymmetricProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#parkedOn
+ITS:parkedOn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#playing
+ITS:playing rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#preposition
+ITS:preposition rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#riding
+ITS:riding rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#sameDominantColor
+ITS:sameDominantColor rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf ITS:description ;
+                      rdf:type owl:SymmetricProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#sameObject
+ITS:sameObject rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#shorterThan
+ITS:shorterThan rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf ITS:spatial ;
+                owl:inverseOf ITS:tallerThan ;
+                rdf:type owl:InverseFunctionalProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#sittingIn
+ITS:sittingIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#skatingOn
+ITS:skatingOn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#smallerThan
+ITS:smallerThan rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf ITS:spatial ;
+                rdf:type owl:InverseFunctionalProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#spatial
+ITS:spatial rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#standingIn
+ITS:standingIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#starts
+ITS:starts rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ITS:occurence .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#stop
+ITS:stop rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#tallerThan
+ITS:tallerThan rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf ITS:spatial ;
+               rdf:type owl:InverseFunctionalProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#to
+ITS:to rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#turning
+ITS:turning rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#under
+ITS:under rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#up
+ITS:up rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf ITS:preposition .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#wait
+ITS:wait rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf ITS:Temporal .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#walkingOn
+ITS:walkingOn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf ITS:action .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#wearing
+ITS:wearing rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ITS:description .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#with
+ITS:with rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf ITS:preposition .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#HOF
+ITS:HOF rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf ITS:histogram ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#HOG
+ITS:HOG rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf ITS:histogram ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#MBH
+ITS:MBH rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf ITS:histogram ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#SIFT
+ITS:SIFT rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf ITS:histogram ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#STIP
+ITS:STIP rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf ITS:histogram ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Size
+ITS:Size rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#area
+ITS:area rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf ITS:Size ;
+         rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#bgColor
+ITS:bgColor rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:color ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#bottom
+ITS:bottom rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf ITS:location ;
+           rdfs:domain ITS:Image ,
+                       ITS:Object ,
+                       ITS:Video ;
+           rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#center
+ITS:center rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf ITS:location ;
+           rdfs:domain ITS:Image ,
+                       ITS:Object ,
+                       ITS:Video ;
+           rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#centerX
+ITS:centerX rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:center ,
+                               ITS:location ;
+            rdfs:domain ITS:Image ,
+                        ITS:Object ,
+                        ITS:Video ;
+            rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#centerY
+ITS:centerY rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:center ,
+                               ITS:location ;
+            rdfs:domain ITS:Image ,
+                        ITS:Object ,
+                        ITS:Video ;
+            rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#color
+ITS:color rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#dateTimeStamp
+ITS:dateTimeStamp rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf ITS:image ;
+                  rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#dominantColor
+ITS:dominantColor rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf ITS:color ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#fgColor
+ITS:fgColor rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:color ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#frameId
+ITS:frameId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:image ;
+            rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#frameType
+ITS:frameType rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf ITS:image ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#height
+ITS:height rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf ITS:Size ;
+           rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#histogram
+ITS:histogram rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#image
+ITS:image rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#imageId
+ITS:imageId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:image ;
+            rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#left
+ITS:left rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf ITS:location ;
+         rdfs:domain ITS:Image ,
+                     ITS:Object ,
+                     ITS:Video ;
+         rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#length
+ITS:length rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf ITS:Size ;
+           rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#location
+ITS:location rdf:type owl:DatatypeProperty ;
+             rdfs:domain ITS:Image ,
+                         ITS:Object ,
+                         ITS:Video ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#make
+ITS:make rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf ITS:vehicleAtrribute ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#noOfColor
+ITS:noOfColor rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf ITS:color ;
+              rdfs:range xsd:positiveInteger ,
+                         xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#noOfObject
+ITS:noOfObject rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf ITS:image ;
+               rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#radius
+ITS:radius rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf ITS:Size ;
+           rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#regNo
+ITS:regNo rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf ITS:vehicleAtrribute ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#right
+ITS:right rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf ITS:location ;
+          rdfs:domain ITS:Image ,
+                      ITS:Object ,
+                      ITS:Video ;
+          rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#sceneNo
+ITS:sceneNo rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:image ;
+            rdfs:domain ITS:Video ;
+            rdfs:range xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#shape
+ITS:shape rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#texture
+ITS:texture rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:color ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#top
+ITS:top rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf ITS:location ;
+        rdfs:domain ITS:Image ,
+                    ITS:Object ,
+                    ITS:Video ;
+        rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#vehicleAtrribute
+ITS:vehicleAtrribute rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#vehicleColor
+ITS:vehicleColor rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf ITS:vehicleAtrribute ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#vehicleType
+ITS:vehicleType rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf ITS:vehicleAtrribute ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#videoId
+ITS:videoId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf ITS:image ;
+            rdfs:domain ITS:Video ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#width
+ITS:width rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf ITS:Size ;
+          rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Animal
+ITS:Animal rdf:type owl:Class ;
+           rdfs:subClassOf ITS:Image ,
+                           ITS:Object ,
+                           ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Bagpack
+ITS:Bagpack rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:Item ,
+                            ITS:Object ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Barrier
+ITS:Barrier rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Highway ,
+                            ITS:Image ,
+                            ITS:Object ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Bench
+ITS:Bench rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Image ,
+                          ITS:Object ,
+                          ITS:Street ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Bicycle
+ITS:Bicycle rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:Object ,
+                            ITS:TwoWheeler ,
+                            ITS:Vehicle ,
+                            ITS:Video ;
+            owl:disjointWith ITS:Motorcycle .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Bridge
+ITS:Bridge rdf:type owl:Class ;
+           rdfs:subClassOf ITS:Highway ,
+                           ITS:Image ,
+                           ITS:Object ,
+                           ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Building
+ITS:Building rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Image ,
+                             ITS:Object ,
+                             ITS:Street ,
+                             ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Bus
+ITS:Bus rdf:type owl:Class ;
+        rdfs:subClassOf ITS:Image ,
+                        ITS:MultiWheeler ,
+                        ITS:Object ,
+                        ITS:Vehicle ,
+                        ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#BustStop
+ITS:BustStop rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Highway ,
+                             ITS:Image ,
+                             ITS:Object ,
+                             ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Car
+ITS:Car rdf:type owl:Class ;
+        rdfs:subClassOf ITS:Image ,
+                        ITS:MultiWheeler ,
+                        ITS:Object ,
+                        ITS:Vehicle ,
+                        ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Caravan
+ITS:Caravan rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:MultiWheeler ,
+                            ITS:Object ,
+                            ITS:Vehicle ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Cat
+ITS:Cat rdf:type owl:Class ;
+        rdfs:subClassOf ITS:Animal ,
+                        ITS:Image ,
+                        ITS:Object ,
+                        ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Cow
+ITS:Cow rdf:type owl:Class ;
+        rdfs:subClassOf ITS:Animal ,
+                        ITS:Image ,
+                        ITS:Object ,
+                        ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Dog
+ITS:Dog rdf:type owl:Class ;
+        rdfs:subClassOf ITS:Animal ,
+                        ITS:Image ,
+                        ITS:Object ,
+                        ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Elephant
+ITS:Elephant rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Animal ,
+                             ITS:Image ,
+                             ITS:Object ,
+                             ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Fence
+ITS:Fence rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Image ,
+                          ITS:Object ,
+                          ITS:Street ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#GreenLight
+ITS:GreenLight rdf:type owl:Class ;
+               rdfs:subClassOf ITS:Image ,
+                               ITS:Object ,
+                               ITS:TrafficSignal ,
+                               ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Handbag
+ITS:Handbag rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:Item ,
+                            ITS:Object ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#HeadLight
+ITS:HeadLight rdf:type owl:Class ;
+              rdfs:subClassOf ITS:Image ,
+                              ITS:Light ,
+                              ITS:Object ,
+                              ITS:Video ;
+              owl:disjointWith ITS:StreetLight .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Highway
+ITS:Highway rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:Object ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Horse
+ITS:Horse rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Animal ,
+                          ITS:Image ,
+                          ITS:Object ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Image
+ITS:Image rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Item
+ITS:Item rdf:type owl:Class ;
+         rdfs:subClassOf ITS:Image ,
+                         ITS:Object ,
+                         ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Light
+ITS:Light rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Image ,
+                          ITS:Object ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Motorcycle
+ITS:Motorcycle rdf:type owl:Class ;
+               rdfs:subClassOf ITS:Image ,
+                               ITS:Object ,
+                               ITS:TwoWheeler ,
+                               ITS:Vehicle ,
+                               ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#MultiWheeler
+ITS:MultiWheeler rdf:type owl:Class ;
+                 rdfs:subClassOf ITS:Image ,
+                                 ITS:Object ,
+                                 ITS:Vehicle ,
+                                 ITS:Video ;
+                 owl:disjointWith ITS:TwoWheeler .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Object
+ITS:Object rdf:type owl:Class ;
+           rdfs:subClassOf ITS:Image ,
+                           ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Off
+ITS:Off rdf:type owl:Class ;
+        rdfs:subClassOf ITS:Image ,
+                        ITS:Object ,
+                        ITS:TrafficSignal ,
+                        ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Parking
+ITS:Parking rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Highway ,
+                            ITS:Image ,
+                            ITS:Object ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Pedestrian
+ITS:Pedestrian rdf:type owl:Class ;
+               rdfs:subClassOf ITS:Image ,
+                               ITS:Object ,
+                               ITS:Person ,
+                               ITS:Video ;
+               owl:disjointWith ITS:Rider .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Person
+ITS:Person rdf:type owl:Class ;
+           rdfs:subClassOf ITS:Image ,
+                           ITS:Object ,
+                           ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Pole
+ITS:Pole rdf:type owl:Class ;
+         rdfs:subClassOf ITS:Image ,
+                         ITS:Object ,
+                         ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RailwayTrack
+ITS:RailwayTrack rdf:type owl:Class ;
+                 rdfs:subClassOf ITS:Highway ,
+                                 ITS:Image ,
+                                 ITS:Object ,
+                                 ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Raodside
+ITS:Raodside rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RedLight
+ITS:RedLight rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Image ,
+                             ITS:Object ,
+                             ITS:TrafficSignal ,
+                             ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Rider
+ITS:Rider rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Image ,
+                          ITS:Object ,
+                          ITS:Person ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Road
+ITS:Road rdf:type owl:Class ;
+         rdfs:subClassOf ITS:Highway ,
+                         ITS:Image ,
+                         ITS:Object ,
+                         ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Roadside
+ITS:Roadside rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Image ,
+                             ITS:Object ,
+                             ITS:Street ,
+                             ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Sheep
+ITS:Sheep rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Animal ,
+                          ITS:Image ,
+                          ITS:Object ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Sidewalk
+ITS:Sidewalk rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Image ,
+                             ITS:Object ,
+                             ITS:Street ,
+                             ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Sign
+ITS:Sign rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#SignPole
+ITS:SignPole rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Image ,
+                             ITS:Object ,
+                             ITS:Pole ,
+                             ITS:Video ;
+             owl:disjointWith ITS:StreetLightPole .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Skateboard
+ITS:Skateboard rdf:type owl:Class ;
+               rdfs:subClassOf ITS:Image ,
+                               ITS:Item ,
+                               ITS:Object ,
+                               ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Sky
+ITS:Sky rdf:type owl:Class ;
+        rdfs:subClassOf ITS:Image ,
+                        ITS:Object ,
+                        ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Stop
+ITS:Stop rdf:type owl:Class ;
+         rdfs:subClassOf ITS:Image ,
+                         ITS:Object ,
+                         ITS:TrafficSign ,
+                         ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Store
+ITS:Store rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Image ,
+                          ITS:Object ,
+                          ITS:Street ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Street
+ITS:Street rdf:type owl:Class ;
+           rdfs:subClassOf ITS:Image ,
+                           ITS:Object ,
+                           ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#StreetLight
+ITS:StreetLight rdf:type owl:Class ;
+                rdfs:subClassOf ITS:Image ,
+                                ITS:Light ,
+                                ITS:Object ,
+                                ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#StreetLightPole
+ITS:StreetLightPole rdf:type owl:Class ;
+                    rdfs:subClassOf ITS:Image ,
+                                    ITS:Object ,
+                                    ITS:Pole ,
+                                    ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Terrain
+ITS:Terrain rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:Object ,
+                            ITS:Vegetation ,
+                            ITS:Video ;
+            owl:disjointWith ITS:Tree .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#TrafficSign
+ITS:TrafficSign rdf:type owl:Class ;
+                rdfs:subClassOf ITS:Image ,
+                                ITS:Object ,
+                                ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#TrafficSignal
+ITS:TrafficSignal rdf:type owl:Class ;
+                  rdfs:subClassOf ITS:Image ,
+                                  ITS:Object ,
+                                  ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Trailer
+ITS:Trailer rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:MultiWheeler ,
+                            ITS:Object ,
+                            ITS:Vehicle ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Train
+ITS:Train rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Image ,
+                          ITS:MultiWheeler ,
+                          ITS:Object ,
+                          ITS:Vehicle ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Tram
+ITS:Tram rdf:type owl:Class ;
+         rdfs:subClassOf ITS:Image ,
+                         ITS:MultiWheeler ,
+                         ITS:Object ,
+                         ITS:Vehicle ,
+                         ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Tree
+ITS:Tree rdf:type owl:Class ;
+         rdfs:subClassOf ITS:Image ,
+                         ITS:Object ,
+                         ITS:Vegetation ,
+                         ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Truck
+ITS:Truck rdf:type owl:Class ;
+          rdfs:subClassOf ITS:Image ,
+                          ITS:MultiWheeler ,
+                          ITS:Object ,
+                          ITS:Vehicle ,
+                          ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Tunnel
+ITS:Tunnel rdf:type owl:Class ;
+           rdfs:subClassOf ITS:Highway ,
+                           ITS:Image ,
+                           ITS:Object ,
+                           ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#TwoWheeler
+ITS:TwoWheeler rdf:type owl:Class ;
+               rdfs:subClassOf ITS:Image ,
+                               ITS:Object ,
+                               ITS:Vehicle ,
+                               ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Umbrella
+ITS:Umbrella rdf:type owl:Class ;
+             rdfs:subClassOf ITS:Image ,
+                             ITS:Item ,
+                             ITS:Object ,
+                             ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Vegetation
+ITS:Vegetation rdf:type owl:Class ;
+               rdfs:subClassOf ITS:Image ,
+                               ITS:Object ,
+                               ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Vehicle
+ITS:Vehicle rdf:type owl:Class ;
+            rdfs:subClassOf ITS:Image ,
+                            ITS:Object ,
+                            ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Video
+ITS:Video rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#Wall
+ITS:Wall rdf:type owl:Class ;
+         rdfs:subClassOf ITS:Image ,
+                         ITS:Object ,
+                         ITS:Street ,
+                         ITS:Video .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#YellowLight
+ITS:YellowLight rdf:type owl:Class ;
+                rdfs:subClassOf ITS:Image ,
+                                ITS:Object ,
+                                ITS:TrafficSignal ,
+                                ITS:Video .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR1
+ITS:AR1 rdf:type owl:NamedIndividual ,
+                 ITS:Animal ,
+                 ITS:Cow ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Video ;
+        ITS:Size "2820.0"^^xsd:float ,
+                 "47.0"^^xsd:float ,
+                 "60.0"^^xsd:float ;
+        ITS:area "2820.0"^^xsd:float ;
+        ITS:bottom "330.0"^^xsd:float ;
+        ITS:center "183.5"^^xsd:float ,
+                   "300.0"^^xsd:float ;
+        ITS:centerX "183.5"^^xsd:float ;
+        ITS:centerY "300.0"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "60.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "160.0"^^xsd:float ;
+        ITS:location "160.0"^^xsd:float ,
+                     "183.5"^^xsd:float ,
+                     "207.0"^^xsd:float ,
+                     "270.0"^^xsd:float ,
+                     "300.0"^^xsd:float ,
+                     "330.0"^^xsd:float ;
+        ITS:right "207.0"^^xsd:float ;
+        ITS:top "270.0"^^xsd:float ;
+        ITS:width "47.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR10
+ITS:AR10 rdf:type owl:NamedIndividual ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Pole ,
+                  ITS:SignPole ,
+                  ITS:Video ;
+         ITS:Size "10.0"^^xsd:float ,
+                  "87.0"^^xsd:float ,
+                  "870.0"^^xsd:float ;
+         ITS:area "870.0"^^xsd:float ;
+         ITS:bottom "377.0"^^xsd:float ;
+         ITS:center "333.5"^^xsd:float ,
+                    "858.0"^^xsd:float ;
+         ITS:centerX "858.0"^^xsd:float ;
+         ITS:centerY "333.5"^^xsd:float ;
+         ITS:color "black"^^xsd:string ;
+         ITS:height "87.0"^^xsd:float ;
+         ITS:image 212 ;
+         ITS:imageId 212 ;
+         ITS:left "853.0"^^xsd:float ;
+         ITS:location "290.0"^^xsd:float ,
+                      "333.5"^^xsd:float ,
+                      "377.0"^^xsd:float ,
+                      "853.0"^^xsd:float ,
+                      "858.0"^^xsd:float ,
+                      "863.0"^^xsd:float ;
+         ITS:right "863.0"^^xsd:float ;
+         ITS:top "290.0"^^xsd:float ;
+         ITS:width "10.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR11
+ITS:AR11 rdf:type owl:NamedIndividual ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Pole ,
+                  ITS:SignPole ,
+                  ITS:Video ;
+         ITS:Size "644.0"^^xsd:float ,
+                  "7.0"^^xsd:float ,
+                  "92.0"^^xsd:float ;
+         ITS:area "644.0"^^xsd:float ;
+         ITS:bottom "442.0"^^xsd:float ;
+         ITS:center "396.0"^^xsd:float ,
+                    "886.5"^^xsd:float ;
+         ITS:centerX "886.5"^^xsd:float ;
+         ITS:centerY "396.0"^^xsd:float ;
+         ITS:color "black"^^xsd:string ;
+         ITS:height "92.0"^^xsd:float ;
+         ITS:image 212 ;
+         ITS:imageId 212 ;
+         ITS:left "883.0"^^xsd:float ;
+         ITS:location "350.0"^^xsd:float ,
+                      "396.0"^^xsd:float ,
+                      "442.0"^^xsd:float ,
+                      "883.0"^^xsd:float ,
+                      "886.5"^^xsd:float ,
+                      "890.0"^^xsd:float ;
+         ITS:right "890.0"^^xsd:float ;
+         ITS:top "350.0"^^xsd:float ;
+         ITS:width "7.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR12
+ITS:AR12 rdf:type owl:NamedIndividual ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Sign ,
+                  ITS:Video ;
+         ITS:Size "125.0"^^xsd:float ,
+                  "45.0"^^xsd:float ,
+                  "5625.0"^^xsd:float ;
+         ITS:area "5625.0"^^xsd:float ;
+         ITS:bottom "285.0"^^xsd:float ;
+         ITS:center "222.5"^^xsd:float ,
+                    "842.5"^^xsd:float ;
+         ITS:centerX "842.5"^^xsd:float ;
+         ITS:centerY "222.5"^^xsd:float ;
+         ITS:color "white"^^xsd:string ;
+         ITS:height "125.0"^^xsd:float ;
+         ITS:image 212 ;
+         ITS:imageId 212 ;
+         ITS:left "820.0"^^xsd:float ;
+         ITS:location "160.0"^^xsd:float ,
+                      "222.5"^^xsd:float ,
+                      "285.0"^^xsd:float ,
+                      "820.0"^^xsd:float ,
+                      "842.5"^^xsd:float ,
+                      "865.0"^^xsd:float ;
+         ITS:right "865.0"^^xsd:float ;
+         ITS:top "160.0"^^xsd:float ;
+         ITS:width "45.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR13
+ITS:AR13 rdf:type owl:NamedIndividual ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Sign ,
+                  ITS:Video ;
+         ITS:Size "2655.0"^^xsd:float ,
+                  "45.0"^^xsd:float ,
+                  "59.0"^^xsd:float ;
+         ITS:area "2655.0"^^xsd:float ;
+         ITS:bottom "345.0"^^xsd:float ;
+         ITS:center "315.5"^^xsd:float ,
+                    "892.5"^^xsd:float ;
+         ITS:centerX "892.5"^^xsd:float ;
+         ITS:centerY "315.5"^^xsd:float ;
+         ITS:color "yellow"^^xsd:string ;
+         ITS:height "59.0"^^xsd:float ;
+         ITS:image 212 ;
+         ITS:imageId 212 ;
+         ITS:left "870.0"^^xsd:float ;
+         ITS:location "286.0"^^xsd:float ,
+                      "315.5"^^xsd:float ,
+                      "345.0"^^xsd:float ,
+                      "870.0"^^xsd:float ,
+                      "892.5"^^xsd:float ,
+                      "915.0"^^xsd:float ;
+         ITS:right "915.0"^^xsd:float ;
+         ITS:top "286.0"^^xsd:float ;
+         ITS:width "45.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR2
+ITS:AR2 rdf:type owl:NamedIndividual ,
+                 ITS:Animal ,
+                 ITS:Cow ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Video ;
+        ITS:Size "3591.0"^^xsd:float ,
+                 "57.0"^^xsd:float ,
+                 "63.0"^^xsd:float ;
+        ITS:area "3591.0"^^xsd:float ;
+        ITS:bottom "363.0"^^xsd:float ;
+        ITS:center "331.5"^^xsd:float ,
+                   "458.5"^^xsd:float ;
+        ITS:centerX "458.5"^^xsd:float ;
+        ITS:centerY "331.5"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "63.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "430.0"^^xsd:float ;
+        ITS:location "300.0"^^xsd:float ,
+                     "331.5"^^xsd:float ,
+                     "363.0"^^xsd:float ,
+                     "430.0"^^xsd:float ,
+                     "458.5"^^xsd:float ,
+                     "487.0"^^xsd:float ;
+        ITS:right "487.0"^^xsd:float ;
+        ITS:top "300.0"^^xsd:float ;
+        ITS:width "57.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR3
+ITS:AR3 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Motorcycle ,
+                 ITS:Object ,
+                 ITS:TwoWheeler ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:Size "170.0"^^xsd:float ,
+                 "228.0"^^xsd:float ,
+                 "38760.0"^^xsd:float ;
+        ITS:area "38760.0"^^xsd:float ;
+        ITS:bottom "670.0"^^xsd:float ;
+        ITS:center "160.0"^^xsd:float ,
+                   "556.0"^^xsd:float ;
+        ITS:centerX "160.0"^^xsd:float ;
+        ITS:centerY "556.0"^^xsd:float ;
+        ITS:color "blue"^^xsd:string ;
+        ITS:height "228.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "75.0"^^xsd:float ;
+        ITS:location "160.0"^^xsd:float ,
+                     "245.0"^^xsd:float ,
+                     "442.0"^^xsd:float ,
+                     "556.0"^^xsd:float ,
+                     "670.0"^^xsd:float ,
+                     "75.0"^^xsd:float ;
+        ITS:right "245.0"^^xsd:float ;
+        ITS:top "442.0"^^xsd:float ;
+        ITS:width "170.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR4
+ITS:AR4 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:AR4 ,
+                        ITS:RE2 ;
+        ITS:sameDominantColor ITS:AR4 ,
+                              ITS:RE2 ;
+        ITS:Size "102.0"^^xsd:float ,
+                 "93.0"^^xsd:float ,
+                 "9486.0"^^xsd:float ;
+        ITS:area "9486.0"^^xsd:float ;
+        ITS:bottom "423.0"^^xsd:float ;
+        ITS:center "376.5"^^xsd:float ,
+                   "639.0"^^xsd:float ;
+        ITS:centerX "639.0"^^xsd:float ;
+        ITS:centerY "376.5"^^xsd:float ;
+        ITS:color "silver"^^xsd:string ;
+        ITS:height "93.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "588.0"^^xsd:float ;
+        ITS:location "330.0"^^xsd:float ,
+                     "376.5"^^xsd:float ,
+                     "423.0"^^xsd:float ,
+                     "588.0"^^xsd:float ,
+                     "639.0"^^xsd:float ,
+                     "690.0"^^xsd:float ;
+        ITS:right "690.0"^^xsd:float ;
+        ITS:top "330.0"^^xsd:float ;
+        ITS:width "102.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR5
+ITS:AR5 rdf:type owl:NamedIndividual ,
+                 ITS:Highway ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Road ,
+                 ITS:Video ;
+        ITS:Size "220000.0"^^xsd:float ,
+                 "352.0"^^xsd:float ,
+                 "625.0"^^xsd:float ;
+        ITS:area "220000.0"^^xsd:float ;
+        ITS:bottom "757.0"^^xsd:float ;
+        ITS:center "581.0"^^xsd:float ,
+                   "707.5"^^xsd:float ;
+        ITS:centerX "707.5"^^xsd:float ;
+        ITS:centerY "581.0"^^xsd:float ;
+        ITS:color "gray"^^xsd:string ;
+        ITS:height "352.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "395.0"^^xsd:float ;
+        ITS:location "1020.0"^^xsd:float ,
+                     "395.0"^^xsd:float ,
+                     "405.0"^^xsd:float ,
+                     "581.0"^^xsd:float ,
+                     "707.5"^^xsd:float ,
+                     "757.0"^^xsd:float ;
+        ITS:right "1020.0"^^xsd:float ;
+        ITS:top "405.0"^^xsd:float ;
+        ITS:width "625.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR6
+ITS:AR6 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Raodside ,
+                 ITS:Video ;
+        ITS:Size "190.0"^^xsd:float ,
+                 "467.0"^^xsd:float ,
+                 "88730.0"^^xsd:float ;
+        ITS:area "88730.0"^^xsd:float ;
+        ITS:bottom "320.0"^^xsd:float ;
+        ITS:center "225.0"^^xsd:float ,
+                   "783.5"^^xsd:float ;
+        ITS:centerX "783.5"^^xsd:float ;
+        ITS:centerY "225.0"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "190.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "550.0"^^xsd:float ;
+        ITS:location "1017.0"^^xsd:float ,
+                     "130.0"^^xsd:float ,
+                     "225.0"^^xsd:float ,
+                     "320.0"^^xsd:float ,
+                     "550.0"^^xsd:float ,
+                     "783.5"^^xsd:float ;
+        ITS:right "1017.0"^^xsd:float ;
+        ITS:top "130.0"^^xsd:float ;
+        ITS:width "467.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR7
+ITS:AR7 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Vegetation ,
+                 ITS:Video ;
+        ITS:Size "149850.0"^^xsd:float ,
+                 "185.0"^^xsd:float ,
+                 "810.0"^^xsd:float ;
+        ITS:area "149850.0"^^xsd:float ;
+        ITS:bottom "185.0"^^xsd:float ;
+        ITS:center "405.0"^^xsd:float ,
+                   "92.5"^^xsd:float ;
+        ITS:centerX "405.0"^^xsd:float ;
+        ITS:centerY "92.5"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "185.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "0.0"^^xsd:float ;
+        ITS:location "0.0"^^xsd:float ,
+                     "185.0"^^xsd:float ,
+                     "405.0"^^xsd:float ,
+                     "810.0"^^xsd:float ,
+                     "92.5"^^xsd:float ;
+        ITS:right "810.0"^^xsd:float ;
+        ITS:top "0.0"^^xsd:float ;
+        ITS:width "810.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR8
+ITS:AR8 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Pole ,
+                 ITS:SignPole ,
+                 ITS:Video ;
+        ITS:Size "134.0"^^xsd:float ,
+                 "6.0"^^xsd:float ,
+                 "804.0"^^xsd:float ;
+        ITS:area "804.0"^^xsd:float ;
+        ITS:bottom "424.0"^^xsd:float ;
+        ITS:center "357.0"^^xsd:float ,
+                   "820.0"^^xsd:float ;
+        ITS:centerX "820.0"^^xsd:float ;
+        ITS:centerY "357.0"^^xsd:float ;
+        ITS:color "black"^^xsd:string ;
+        ITS:height "134.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "817.0"^^xsd:float ;
+        ITS:location "290.0"^^xsd:float ,
+                     "357.0"^^xsd:float ,
+                     "424.0"^^xsd:float ,
+                     "817.0"^^xsd:float ,
+                     "820.0"^^xsd:float ,
+                     "823.0"^^xsd:float ;
+        ITS:right "823.0"^^xsd:float ;
+        ITS:top "290.0"^^xsd:float ;
+        ITS:width "6.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#AR9
+ITS:AR9 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Vegetation ,
+                 ITS:Video ;
+        ITS:Size "34790.0"^^xsd:float ,
+                 "355.0"^^xsd:float ,
+                 "98.0"^^xsd:float ;
+        ITS:area "34790.0"^^xsd:float ;
+        ITS:bottom "445.0"^^xsd:float ;
+        ITS:center "267.5"^^xsd:float ,
+                   "968.0"^^xsd:float ;
+        ITS:centerX "968.0"^^xsd:float ;
+        ITS:centerY "267.5"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "355.0"^^xsd:float ;
+        ITS:image 212 ;
+        ITS:imageId 212 ;
+        ITS:left "919.0"^^xsd:float ;
+        ITS:location "1017.0"^^xsd:float ,
+                     "267.5"^^xsd:float ,
+                     "445.0"^^xsd:float ,
+                     "90.0"^^xsd:float ,
+                     "919.0"^^xsd:float ,
+                     "968.0"^^xsd:float ;
+        ITS:right "1017.0"^^xsd:float ;
+        ITS:top "90.0"^^xsd:float ;
+        ITS:width "98.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR1
+ITS:CR1 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:CR1 ,
+                        ITS:RE3 ;
+        ITS:sameDominantColor ITS:CR1 ,
+                              ITS:RE3 ;
+        ITS:Size "185.0"^^xsd:float ,
+                 "487.0"^^xsd:float ,
+                 "90095.0"^^xsd:float ;
+        ITS:area "90095.0"^^xsd:float ;
+        ITS:bottom "548.0"^^xsd:float ;
+        ITS:center "455.5"^^xsd:float ,
+                   "456.5"^^xsd:float ;
+        ITS:centerX "456.5"^^xsd:float ;
+        ITS:centerY "455.5"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "185.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "213.0"^^xsd:float ;
+        ITS:location "213.0"^^xsd:float ,
+                     "363.0"^^xsd:float ,
+                     "455.5"^^xsd:float ,
+                     "456.5"^^xsd:float ,
+                     "548.0"^^xsd:float ,
+                     "700.0"^^xsd:float ;
+        ITS:right "700.0"^^xsd:float ;
+        ITS:top "363.0"^^xsd:float ;
+        ITS:width "487.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR10
+ITS:CR10 rdf:type owl:NamedIndividual ,
+                  ITS:Highway ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Road ,
+                  ITS:Video ;
+         ITS:Size "1083.0"^^xsd:float ,
+                  "293.0"^^xsd:float ,
+                  "317319.0"^^xsd:float ;
+         ITS:area "317319.0"^^xsd:float ;
+         ITS:bottom "728.0"^^xsd:float ;
+         ITS:center "541.5"^^xsd:float ,
+                    "581.5"^^xsd:float ;
+         ITS:centerX "541.5"^^xsd:float ;
+         ITS:centerY "581.5"^^xsd:float ;
+         ITS:color "gray"^^xsd:string ;
+         ITS:height "293.0"^^xsd:float ;
+         ITS:image 101 ;
+         ITS:imageId 101 ;
+         ITS:left "0.0"^^xsd:float ;
+         ITS:location "0.0"^^xsd:float ,
+                      "1083.0"^^xsd:float ,
+                      "435.0"^^xsd:float ,
+                      "541.5"^^xsd:float ,
+                      "581.5"^^xsd:float ,
+                      "728.0"^^xsd:float ;
+         ITS:right "1083.0"^^xsd:float ;
+         ITS:top "435.0"^^xsd:float ;
+         ITS:width "1083.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR11
+ITS:CR11 rdf:type owl:NamedIndividual ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Roadside ,
+                  ITS:Street ,
+                  ITS:Video ;
+         ITS:Size "10320.0"^^xsd:float ,
+                  "215.0"^^xsd:float ,
+                  "48.0"^^xsd:float ;
+         ITS:area "10320.0"^^xsd:float ;
+         ITS:bottom "455.0"^^xsd:float ;
+         ITS:center "107.5"^^xsd:float ,
+                    "431.0"^^xsd:float ;
+         ITS:centerX "107.5"^^xsd:float ;
+         ITS:centerY "431.0"^^xsd:float ;
+         ITS:color "gray"^^xsd:string ;
+         ITS:height "48.0"^^xsd:float ;
+         ITS:image 101 ;
+         ITS:imageId 101 ;
+         ITS:left "0.0"^^xsd:float ;
+         ITS:location "0.0"^^xsd:float ,
+                      "107.5"^^xsd:float ,
+                      "215.0"^^xsd:float ,
+                      "407.0"^^xsd:float ,
+                      "431.0"^^xsd:float ,
+                      "455.0"^^xsd:float ;
+         ITS:right "215.0"^^xsd:float ;
+         ITS:top "407.0"^^xsd:float ;
+         ITS:width "215.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR12
+ITS:CR12 rdf:type owl:NamedIndividual ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Pedestrian ,
+                  ITS:Person ,
+                  ITS:Video ;
+         ITS:Size "140.0"^^xsd:float ,
+                  "45.0"^^xsd:float ,
+                  "6300.0"^^xsd:float ;
+         ITS:area "6300.0"^^xsd:float ;
+         ITS:bottom "485.0"^^xsd:float ;
+         ITS:center "415.0"^^xsd:float ,
+                    "737.5"^^xsd:float ;
+         ITS:centerX "737.5"^^xsd:float ;
+         ITS:centerY "415.0"^^xsd:float ;
+         ITS:color "white"^^xsd:string ;
+         ITS:height "140.0"^^xsd:float ;
+         ITS:image 101 ;
+         ITS:imageId 101 ;
+         ITS:left "715.0"^^xsd:float ;
+         ITS:location "345.0"^^xsd:float ,
+                      "415.0"^^xsd:float ,
+                      "485.0"^^xsd:float ,
+                      "715.0"^^xsd:float ,
+                      "737.5"^^xsd:float ,
+                      "760.0"^^xsd:float ;
+         ITS:right "760.0"^^xsd:float ;
+         ITS:top "345.0"^^xsd:float ;
+         ITS:width "45.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR2
+ITS:CR2 rdf:type owl:NamedIndividual ,
+                 ITS:Building ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Street ,
+                 ITS:Video ;
+        ITS:Size "1076.0"^^xsd:float ,
+                 "332.0"^^xsd:float ,
+                 "357232.0"^^xsd:float ;
+        ITS:area "357232.0"^^xsd:float ;
+        ITS:bottom "357.0"^^xsd:float ;
+        ITS:center "191.0"^^xsd:float ,
+                   "542.0"^^xsd:float ;
+        ITS:centerX "542.0"^^xsd:float ;
+        ITS:centerY "191.0"^^xsd:float ;
+        ITS:color "ivory"^^xsd:string ;
+        ITS:height "332.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "4.0"^^xsd:float ;
+        ITS:location "1080.0"^^xsd:float ,
+                     "191.0"^^xsd:float ,
+                     "25.0"^^xsd:float ,
+                     "357.0"^^xsd:float ,
+                     "4.0"^^xsd:float ,
+                     "542.0"^^xsd:float ;
+        ITS:right "1080.0"^^xsd:float ;
+        ITS:top "25.0"^^xsd:float ;
+        ITS:width "1076.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR3
+ITS:CR3 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Vegetation ,
+                 ITS:Video ;
+        ITS:Size "110.0"^^xsd:float ,
+                 "1940.0"^^xsd:float ,
+                 "213400.0"^^xsd:float ;
+        ITS:area "213400.0"^^xsd:float ;
+        ITS:bottom "2000.0"^^xsd:float ;
+        ITS:center "1030.0"^^xsd:float ,
+                   "500.0"^^xsd:float ;
+        ITS:centerX "500.0"^^xsd:float ;
+        ITS:centerY "1030.0"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "1940.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "445.0"^^xsd:float ;
+        ITS:location "1030.0"^^xsd:float ,
+                     "2000.0"^^xsd:float ,
+                     "445.0"^^xsd:float ,
+                     "500.0"^^xsd:float ,
+                     "555.0"^^xsd:float ,
+                     "60.0"^^xsd:float ;
+        ITS:right "555.0"^^xsd:float ;
+        ITS:top "60.0"^^xsd:float ;
+        ITS:width "110.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR4
+ITS:CR4 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Light ,
+                 ITS:Object ,
+                 ITS:StreetLight ,
+                 ITS:Video ;
+        ITS:Size "1715.0"^^xsd:float ,
+                 "35.0"^^xsd:float ,
+                 "49.0"^^xsd:float ;
+        ITS:area "1715.0"^^xsd:float ;
+        ITS:bottom "72.0"^^xsd:float ;
+        ITS:center "386.5"^^xsd:float ,
+                   "54.5"^^xsd:float ;
+        ITS:centerX "386.5"^^xsd:float ;
+        ITS:centerY "54.5"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "35.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "362.0"^^xsd:float ;
+        ITS:location "362.0"^^xsd:float ,
+                     "37.0"^^xsd:float ,
+                     "386.5"^^xsd:float ,
+                     "411.0"^^xsd:float ,
+                     "54.5"^^xsd:float ,
+                     "72.0"^^xsd:float ;
+        ITS:right "411.0"^^xsd:float ;
+        ITS:top "37.0"^^xsd:float ;
+        ITS:width "49.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR5
+ITS:CR5 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Pole ,
+                 ITS:Video ;
+        ITS:Size "20.0"^^xsd:float ,
+                 "303.0"^^xsd:float ,
+                 "6060.0"^^xsd:float ;
+        ITS:area "6060.0"^^xsd:float ;
+        ITS:bottom "365.0"^^xsd:float ;
+        ITS:center "213.5"^^xsd:float ,
+                   "400.0"^^xsd:float ;
+        ITS:centerX "400.0"^^xsd:float ;
+        ITS:centerY "213.5"^^xsd:float ;
+        ITS:color "black"^^xsd:string ;
+        ITS:height "303.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "390.0"^^xsd:float ;
+        ITS:location "213.5"^^xsd:float ,
+                     "365.0"^^xsd:float ,
+                     "390.0"^^xsd:float ,
+                     "400.0"^^xsd:float ,
+                     "410.0"^^xsd:float ,
+                     "62.0"^^xsd:float ;
+        ITS:right "410.0"^^xsd:float ;
+        ITS:top "62.0"^^xsd:float ;
+        ITS:width "20.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR6
+ITS:CR6 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:CR6 ,
+                        ITS:CR7 ,
+                        ITS:RE6 ;
+        ITS:sameDominantColor ITS:CR6 ,
+                              ITS:CR7 ,
+                              ITS:RE6 ;
+        ITS:Size "12580.0"^^xsd:float ,
+                 "148.0"^^xsd:float ,
+                 "85.0"^^xsd:float ;
+        ITS:area "12580.0"^^xsd:float ;
+        ITS:bottom "424.0"^^xsd:float ;
+        ITS:center "381.5"^^xsd:float ,
+                   "76.0"^^xsd:float ;
+        ITS:centerX "76.0"^^xsd:float ;
+        ITS:centerY "381.5"^^xsd:float ;
+        ITS:color "black"^^xsd:string ;
+        ITS:height "85.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "2.0"^^xsd:float ;
+        ITS:location "150.0"^^xsd:float ,
+                     "2.0"^^xsd:float ,
+                     "339.0"^^xsd:float ,
+                     "381.5"^^xsd:float ,
+                     "424.0"^^xsd:float ,
+                     "76.0"^^xsd:float ;
+        ITS:right "150.0"^^xsd:float ;
+        ITS:top "339.0"^^xsd:float ;
+        ITS:width "148.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR7
+ITS:CR7 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:CR6 ,
+                        ITS:CR7 ,
+                        ITS:RE6 ;
+        ITS:sameDominantColor ITS:CR6 ,
+                              ITS:CR7 ,
+                              ITS:RE6 ;
+        ITS:Size "19845.0"^^xsd:float ,
+                 "245.0"^^xsd:float ,
+                 "81.0"^^xsd:float ;
+        ITS:area "19845.0"^^xsd:float ;
+        ITS:bottom "446.0"^^xsd:float ;
+        ITS:center "252.5"^^xsd:float ,
+                   "405.5"^^xsd:float ;
+        ITS:centerX "252.5"^^xsd:float ;
+        ITS:centerY "405.5"^^xsd:float ;
+        ITS:color "black"^^xsd:string ;
+        ITS:height "81.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "130.0"^^xsd:float ;
+        ITS:location "130.0"^^xsd:float ,
+                     "252.5"^^xsd:float ,
+                     "365.0"^^xsd:float ,
+                     "375.0"^^xsd:float ,
+                     "405.5"^^xsd:float ,
+                     "446.0"^^xsd:float ;
+        ITS:right "375.0"^^xsd:float ;
+        ITS:top "365.0"^^xsd:float ;
+        ITS:width "245.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR8
+ITS:CR8 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Pedestrian ,
+                 ITS:Person ,
+                 ITS:Video ;
+        ITS:Size "154.0"^^xsd:float ,
+                 "35.0"^^xsd:float ,
+                 "5390.0"^^xsd:float ;
+        ITS:area "5390.0"^^xsd:float ;
+        ITS:bottom "485.0"^^xsd:float ;
+        ITS:center "408.0"^^xsd:float ,
+                   "672.5"^^xsd:float ;
+        ITS:centerX "672.5"^^xsd:float ;
+        ITS:centerY "408.0"^^xsd:float ;
+        ITS:color "khaki"^^xsd:string ;
+        ITS:height "154.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "655.0"^^xsd:float ;
+        ITS:location "331.0"^^xsd:float ,
+                     "408.0"^^xsd:float ,
+                     "485.0"^^xsd:float ,
+                     "655.0"^^xsd:float ,
+                     "672.5"^^xsd:float ,
+                     "690.0"^^xsd:float ;
+        ITS:right "690.0"^^xsd:float ;
+        ITS:top "331.0"^^xsd:float ;
+        ITS:width "35.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#CR9
+ITS:CR9 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Sidewalk ,
+                 ITS:Street ,
+                 ITS:Video ;
+        ITS:Size "115.0"^^xsd:float ,
+                 "383.0"^^xsd:float ,
+                 "44045.0"^^xsd:float ;
+        ITS:area "44045.0"^^xsd:float ;
+        ITS:bottom "570.0"^^xsd:float ;
+        ITS:center "512.5"^^xsd:float ,
+                   "896.5"^^xsd:float ;
+        ITS:centerX "896.5"^^xsd:float ;
+        ITS:centerY "512.5"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "115.0"^^xsd:float ;
+        ITS:image 101 ;
+        ITS:imageId 101 ;
+        ITS:left "705.0"^^xsd:float ;
+        ITS:location "1088.0"^^xsd:float ,
+                     "455.0"^^xsd:float ,
+                     "512.5"^^xsd:float ,
+                     "570.0"^^xsd:float ,
+                     "705.0"^^xsd:float ,
+                     "896.5"^^xsd:float ;
+        ITS:right "1088.0"^^xsd:float ;
+        ITS:top "455.0"^^xsd:float ;
+        ITS:width "383.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC1
+ITS:DC1 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Vegetation ,
+                 ITS:Video ;
+        ITS:Size "232.0"^^xsd:float ,
+                 "270.0"^^xsd:float ,
+                 "62640.0"^^xsd:float ;
+        ITS:area "62640.0"^^xsd:float ;
+        ITS:bottom "285.0"^^xsd:float ;
+        ITS:center "134.0"^^xsd:float ,
+                   "150.0"^^xsd:float ;
+        ITS:centerX "134.0"^^xsd:float ;
+        ITS:centerY "150.0"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "270.0"^^xsd:float ;
+        ITS:image 216 ;
+        ITS:imageId 216 ;
+        ITS:left "18.0"^^xsd:float ;
+        ITS:location "134.0"^^xsd:float ,
+                     "15.0"^^xsd:float ,
+                     "150.0"^^xsd:float ,
+                     "18.0"^^xsd:float ,
+                     "250.0"^^xsd:float ,
+                     "285.0"^^xsd:float ;
+        ITS:right "250.0"^^xsd:float ;
+        ITS:top "15.0"^^xsd:float ;
+        ITS:width "232.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC10
+ITS:DC10 rdf:type owl:NamedIndividual ,
+                  ITS:Image ,
+                  ITS:Object ,
+                  ITS:Person ,
+                  ITS:Rider ,
+                  ITS:Video ;
+         ITS:Size "12960.0"^^xsd:float ,
+                  "144.0"^^xsd:float ,
+                  "90.0"^^xsd:float ;
+         ITS:area "12960.0"^^xsd:float ;
+         ITS:bottom "290.0"^^xsd:float ;
+         ITS:center "245.0"^^xsd:float ,
+                    "722.0"^^xsd:float ;
+         ITS:centerX "722.0"^^xsd:float ;
+         ITS:centerY "245.0"^^xsd:float ;
+         ITS:color "orange"^^xsd:string ;
+         ITS:height "90.0"^^xsd:float ;
+         ITS:image 216 ;
+         ITS:imageId 216 ;
+         ITS:left "650.0"^^xsd:float ;
+         ITS:location "200.0"^^xsd:float ,
+                      "245.0"^^xsd:float ,
+                      "290.0"^^xsd:float ,
+                      "650.0"^^xsd:float ,
+                      "722.0"^^xsd:float ,
+                      "794.0"^^xsd:float ;
+         ITS:right "794.0"^^xsd:float ;
+         ITS:top "200.0"^^xsd:float ;
+         ITS:width "144.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC11
+ITS:DC11 rdf:type owl:NamedIndividual ,
+                  ITS:HeadLight ,
+                  ITS:Image ,
+                  ITS:Light ,
+                  ITS:Object ,
+                  ITS:Video ;
+         ITS:Size "13300.0"^^xsd:float ,
+                  "140.0"^^xsd:float ,
+                  "95.0"^^xsd:float ;
+         ITS:area "13300.0"^^xsd:float ;
+         ITS:bottom "655.0"^^xsd:float ;
+         ITS:center "235.0"^^xsd:float ,
+                    "607.5"^^xsd:float ;
+         ITS:centerX "235.0"^^xsd:float ;
+         ITS:centerY "607.5"^^xsd:float ;
+         ITS:color "silver"^^xsd:string ;
+         ITS:height "95.0"^^xsd:float ;
+         ITS:image 216 ;
+         ITS:imageId 216 ;
+         ITS:left "165.0"^^xsd:float ;
+         ITS:location "165.0"^^xsd:float ,
+                      "235.0"^^xsd:float ,
+                      "305.0"^^xsd:float ,
+                      "560.0"^^xsd:float ,
+                      "607.5"^^xsd:float ,
+                      "655.0"^^xsd:float ;
+         ITS:right "305.0"^^xsd:float ;
+         ITS:top "560.0"^^xsd:float ;
+         ITS:width "140.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC12
+ITS:DC12 rdf:type owl:NamedIndividual ,
+                  ITS:HeadLight ,
+                  ITS:Image ,
+                  ITS:Light ,
+                  ITS:Object ,
+                  ITS:Video ;
+         ITS:Size "10738.0"^^xsd:float ,
+                  "118.0"^^xsd:float ,
+                  "91.0"^^xsd:float ;
+         ITS:area "10738.0"^^xsd:float ;
+         ITS:bottom "625.0"^^xsd:float ;
+         ITS:center "579.5"^^xsd:float ,
+                    "941.0"^^xsd:float ;
+         ITS:centerX "941.0"^^xsd:float ;
+         ITS:centerY "579.5"^^xsd:float ;
+         ITS:color "silver"^^xsd:string ;
+         ITS:height "91.0"^^xsd:float ;
+         ITS:image 216 ;
+         ITS:imageId 216 ;
+         ITS:left "882.0"^^xsd:float ;
+         ITS:location "1000.0"^^xsd:float ,
+                      "534.0"^^xsd:float ,
+                      "579.5"^^xsd:float ,
+                      "625.0"^^xsd:float ,
+                      "882.0"^^xsd:float ,
+                      "941.0"^^xsd:float ;
+         ITS:right "1000.0"^^xsd:float ;
+         ITS:top "534.0"^^xsd:float ;
+         ITS:width "118.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC2
+ITS:DC2 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Vegetation ,
+                 ITS:Video ;
+        ITS:Size "103.0"^^xsd:float ,
+                 "530.0"^^xsd:float ,
+                 "54590.0"^^xsd:float ;
+        ITS:area "54590.0"^^xsd:float ;
+        ITS:bottom "110.0"^^xsd:float ;
+        ITS:center "532.0"^^xsd:float ,
+                   "58.5"^^xsd:float ;
+        ITS:centerX "532.0"^^xsd:float ;
+        ITS:centerY "58.5"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "103.0"^^xsd:float ;
+        ITS:image 216 ;
+        ITS:imageId 216 ;
+        ITS:left "267.0"^^xsd:float ;
+        ITS:location "110.0"^^xsd:float ,
+                     "267.0"^^xsd:float ,
+                     "532.0"^^xsd:float ,
+                     "58.5"^^xsd:float ,
+                     "7.0"^^xsd:float ,
+                     "797.0"^^xsd:float ;
+        ITS:right "797.0"^^xsd:float ;
+        ITS:top "7.0"^^xsd:float ;
+        ITS:width "530.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC3
+ITS:DC3 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Vegetation ,
+                 ITS:Video ;
+        ITS:Size "292.0"^^xsd:float ,
+                 "294.0"^^xsd:float ,
+                 "85848.0"^^xsd:float ;
+        ITS:area "85848.0"^^xsd:float ;
+        ITS:bottom "305.0"^^xsd:float ;
+        ITS:center "158.0"^^xsd:float ,
+                   "959.0"^^xsd:float ;
+        ITS:centerX "959.0"^^xsd:float ;
+        ITS:centerY "158.0"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "294.0"^^xsd:float ;
+        ITS:image 216 ;
+        ITS:imageId 216 ;
+        ITS:left "813.0"^^xsd:float ;
+        ITS:location "11.0"^^xsd:float ,
+                     "1105.0"^^xsd:float ,
+                     "158.0"^^xsd:float ,
+                     "305.0"^^xsd:float ,
+                     "813.0"^^xsd:float ,
+                     "959.0"^^xsd:float ;
+        ITS:right "1105.0"^^xsd:float ;
+        ITS:top "11.0"^^xsd:float ;
+        ITS:width "292.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC4
+ITS:DC4 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Tree ,
+                 ITS:Vegetation ,
+                 ITS:Video ;
+        ITS:Size "26600.0"^^xsd:float ,
+                 "280.0"^^xsd:float ,
+                 "95.0"^^xsd:float ;
+        ITS:area "26600.0"^^xsd:float ;
+        ITS:bottom "310.0"^^xsd:float ;
+        ITS:center "170.0"^^xsd:float ,
+                   "912.5"^^xsd:float ;
+        ITS:centerX "912.5"^^xsd:float ;
+        ITS:centerY "170.0"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "280.0"^^xsd:float ;
+        ITS:image 216 ;
+        ITS:imageId 216 ;
+        ITS:left "865.0"^^xsd:float ;
+        ITS:location "170.0"^^xsd:float ,
+                     "30.0"^^xsd:float ,
+                     "310.0"^^xsd:float ,
+                     "865.0"^^xsd:float ,
+                     "912.5"^^xsd:float ,
+                     "960.0"^^xsd:float ;
+        ITS:right "960.0"^^xsd:float ;
+        ITS:top "30.0"^^xsd:float ;
+        ITS:width "95.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC5
+ITS:DC5 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:DC5 ,
+                        ITS:I2 ,
+                        ITS:I3 ;
+        ITS:sameDominantColor ITS:DC5 ,
+                              ITS:I2 ,
+                              ITS:I3 ;
+        ITS:Size "598780.0"^^xsd:float ,
+                 "611.0"^^xsd:float ,
+                 "980.0"^^xsd:float ;
+        ITS:area "598780.0"^^xsd:float ;
+        ITS:bottom "721.0"^^xsd:float ;
+        ITS:center "415.5"^^xsd:float ,
+                   "605.0"^^xsd:float ;
+        ITS:centerX "605.0"^^xsd:float ;
+        ITS:centerY "415.5"^^xsd:float ;
+        ITS:color "blue"^^xsd:string ;
+        ITS:height "611.0"^^xsd:float ;
+        ITS:image 216 ;
+        ITS:imageId 216 ;
+        ITS:left "115.0"^^xsd:float ;
+        ITS:location "1095.0"^^xsd:float ,
+                     "110.0"^^xsd:float ,
+                     "115.0"^^xsd:float ,
+                     "415.5"^^xsd:float ,
+                     "605.0"^^xsd:float ,
+                     "721.0"^^xsd:float ;
+        ITS:right "1095.0"^^xsd:float ;
+        ITS:top "110.0"^^xsd:float ;
+        ITS:width "980.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC8
+ITS:DC8 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Person ,
+                 ITS:Video ;
+        ITS:Size "115.0"^^xsd:float ,
+                 "198.0"^^xsd:float ,
+                 "22770.0"^^xsd:float ;
+        ITS:area "22770.0"^^xsd:float ;
+        ITS:bottom "315.0"^^xsd:float ;
+        ITS:center "257.5"^^xsd:float ,
+                   "454.0"^^xsd:float ;
+        ITS:centerX "454.0"^^xsd:float ;
+        ITS:centerY "257.5"^^xsd:float ;
+        ITS:color "orange"^^xsd:string ;
+        ITS:height "115.0"^^xsd:float ;
+        ITS:image 216 ;
+        ITS:imageId 216 ;
+        ITS:left "355.0"^^xsd:float ;
+        ITS:location "200.0"^^xsd:float ,
+                     "257.5"^^xsd:float ,
+                     "315.0"^^xsd:float ,
+                     "355.0"^^xsd:float ,
+                     "454.0"^^xsd:float ,
+                     "553.0"^^xsd:float ;
+        ITS:right "553.0"^^xsd:float ;
+        ITS:top "200.0"^^xsd:float ;
+        ITS:width "198.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#DC9
+ITS:DC9 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Person ,
+                 ITS:Video ;
+        ITS:Size "13266.0"^^xsd:float ,
+                 "134.0"^^xsd:float ,
+                 "99.0"^^xsd:float ;
+        ITS:area "13266.0"^^xsd:float ;
+        ITS:bottom "271.0"^^xsd:float ;
+        ITS:center "221.5"^^xsd:float ,
+                   "662.0"^^xsd:float ;
+        ITS:centerX "662.0"^^xsd:float ;
+        ITS:centerY "221.5"^^xsd:float ;
+        ITS:color "orange"^^xsd:string ;
+        ITS:height "99.0"^^xsd:float ;
+        ITS:image 216 ;
+        ITS:imageId 216 ;
+        ITS:left "595.0"^^xsd:float ;
+        ITS:location "172.0"^^xsd:float ,
+                     "221.5"^^xsd:float ,
+                     "271.0"^^xsd:float ,
+                     "595.0"^^xsd:float ,
+                     "662.0"^^xsd:float ,
+                     "729.0"^^xsd:float ;
+        ITS:right "729.0"^^xsd:float ;
+        ITS:top "172.0"^^xsd:float ;
+        ITS:width "134.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#I1
+ITS:I1 rdf:type owl:NamedIndividual ,
+                ITS:Image ,
+                ITS:Object ,
+                ITS:Person ,
+                ITS:Video ;
+       ITS:Size "2500.0"^^xsd:float ,
+                "50.0"^^xsd:float ;
+       ITS:area "2500.0"^^xsd:float ;
+       ITS:bottom "250.0"^^xsd:float ;
+       ITS:center "1.0"^^xsd:float ,
+                  "214.0"^^xsd:float ;
+       ITS:centerX "214.0"^^xsd:float ;
+       ITS:centerY "1.0"^^xsd:float ;
+       ITS:color "red"^^xsd:string ;
+       ITS:height "50.0"^^xsd:float ;
+       ITS:image 1 ;
+       ITS:imageId 1 ;
+       ITS:left "100.0"^^xsd:float ;
+       ITS:location "1.0"^^xsd:float ,
+                    "100.0"^^xsd:float ,
+                    "150.0"^^xsd:float ,
+                    "200.0"^^xsd:float ,
+                    "214.0"^^xsd:float ,
+                    "250.0"^^xsd:float ;
+       ITS:right "150.0"^^xsd:float ;
+       ITS:top "200.0"^^xsd:float ;
+       ITS:width "50.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#I2
+ITS:I2 rdf:type owl:NamedIndividual ,
+                ITS:Car ,
+                ITS:Image ,
+                ITS:MultiWheeler ,
+                ITS:Object ,
+                ITS:Vehicle ,
+                ITS:Video ;
+       ITS:description ITS:DC5 ,
+                       ITS:I2 ,
+                       ITS:I3 ;
+       ITS:sameDominantColor ITS:DC5 ,
+                             ITS:I2 ,
+                             ITS:I3 ;
+       ITS:Size "2500.0"^^xsd:float ,
+                "50.0"^^xsd:float ;
+       ITS:area "2500.0"^^xsd:float ;
+       ITS:bottom "250.0"^^xsd:float ;
+       ITS:center "1.0"^^xsd:float ,
+                  "214.0"^^xsd:float ;
+       ITS:centerX "214.0"^^xsd:float ;
+       ITS:centerY "1.0"^^xsd:float ;
+       ITS:color "blue"^^xsd:string ;
+       ITS:height "50.0"^^xsd:float ;
+       ITS:image 1 ;
+       ITS:imageId 1 ;
+       ITS:left "100.0"^^xsd:float ;
+       ITS:location "1.0"^^xsd:float ,
+                    "100.0"^^xsd:float ,
+                    "150.0"^^xsd:float ,
+                    "200.0"^^xsd:float ,
+                    "214.0"^^xsd:float ,
+                    "250.0"^^xsd:float ;
+       ITS:right "150.0"^^xsd:float ;
+       ITS:top "200.0"^^xsd:float ;
+       ITS:width "50.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#I3
+ITS:I3 rdf:type owl:NamedIndividual ,
+                ITS:Car ,
+                ITS:Image ,
+                ITS:MultiWheeler ,
+                ITS:Object ,
+                ITS:Vehicle ,
+                ITS:Video ;
+       ITS:description ITS:DC5 ,
+                       ITS:I2 ,
+                       ITS:I3 ;
+       ITS:sameDominantColor ITS:DC5 ,
+                             ITS:I2 ,
+                             ITS:I3 ;
+       ITS:Size "2500.0"^^xsd:float ,
+                "50.0"^^xsd:float ;
+       ITS:area "2500.0"^^xsd:float ;
+       ITS:bottom "250.0"^^xsd:float ;
+       ITS:center "1.0"^^xsd:float ,
+                  "214.0"^^xsd:float ;
+       ITS:centerX "214.0"^^xsd:float ;
+       ITS:centerY "1.0"^^xsd:float ;
+       ITS:color "blue"^^xsd:string ;
+       ITS:height "50.0"^^xsd:float ;
+       ITS:image 1 ;
+       ITS:imageId 1 ;
+       ITS:left "100.0"^^xsd:float ;
+       ITS:location "1.0"^^xsd:float ,
+                    "100.0"^^xsd:float ,
+                    "150.0"^^xsd:float ,
+                    "200.0"^^xsd:float ,
+                    "214.0"^^xsd:float ,
+                    "250.0"^^xsd:float ;
+       ITS:right "150.0"^^xsd:float ;
+       ITS:top "200.0"^^xsd:float ;
+       ITS:width "50.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE1
+ITS:RE1 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Motorcycle ,
+                 ITS:Object ,
+                 ITS:TwoWheeler ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:Size "5025.0"^^xsd:float ,
+                 "67.0"^^xsd:float ,
+                 "75.0"^^xsd:float ;
+        ITS:area "5025.0"^^xsd:float ;
+        ITS:bottom "365.0"^^xsd:float ;
+        ITS:center "327.5"^^xsd:float ,
+                   "411.5"^^xsd:float ;
+        ITS:centerX "411.5"^^xsd:float ;
+        ITS:centerY "327.5"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "75.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "378.0"^^xsd:float ;
+        ITS:location "290.0"^^xsd:float ,
+                     "327.5"^^xsd:float ,
+                     "365.0"^^xsd:float ,
+                     "378.0"^^xsd:float ,
+                     "411.5"^^xsd:float ,
+                     "445.0"^^xsd:float ;
+        ITS:right "445.0"^^xsd:float ;
+        ITS:top "290.0"^^xsd:float ;
+        ITS:width "67.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE2
+ITS:RE2 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:AR4 ,
+                        ITS:RE2 ;
+        ITS:sameDominantColor ITS:AR4 ,
+                              ITS:RE2 ;
+        ITS:Size "12865.0"^^xsd:float ,
+                 "155.0"^^xsd:float ,
+                 "83.0"^^xsd:float ;
+        ITS:area "12865.0"^^xsd:float ;
+        ITS:bottom "305.0"^^xsd:float ;
+        ITS:center "263.5"^^xsd:float ,
+                   "497.5"^^xsd:float ;
+        ITS:centerX "497.5"^^xsd:float ;
+        ITS:centerY "263.5"^^xsd:float ;
+        ITS:color "silver"^^xsd:string ;
+        ITS:height "83.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "420.0"^^xsd:float ;
+        ITS:location "222.0"^^xsd:float ,
+                     "263.5"^^xsd:float ,
+                     "305.0"^^xsd:float ,
+                     "420.0"^^xsd:float ,
+                     "497.5"^^xsd:float ,
+                     "575.0"^^xsd:float ;
+        ITS:right "575.0"^^xsd:float ;
+        ITS:top "222.0"^^xsd:float ;
+        ITS:width "155.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE3
+ITS:RE3 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:CR1 ,
+                        ITS:RE3 ;
+        ITS:sameDominantColor ITS:CR1 ,
+                              ITS:RE3 ;
+        ITS:Size "115.0"^^xsd:float ,
+                 "177.0"^^xsd:float ,
+                 "20355.0"^^xsd:float ;
+        ITS:area "20355.0"^^xsd:float ;
+        ITS:bottom "368.0"^^xsd:float ;
+        ITS:center "310.5"^^xsd:float ,
+                   "819.5"^^xsd:float ;
+        ITS:centerX "819.5"^^xsd:float ;
+        ITS:centerY "310.5"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "115.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "731.0"^^xsd:float ;
+        ITS:location "253.0"^^xsd:float ,
+                     "310.5"^^xsd:float ,
+                     "368.0"^^xsd:float ,
+                     "731.0"^^xsd:float ,
+                     "819.5"^^xsd:float ,
+                     "908.0"^^xsd:float ;
+        ITS:right "908.0"^^xsd:float ;
+        ITS:top "253.0"^^xsd:float ;
+        ITS:width "177.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE4
+ITS:RE4 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:RE4 ;
+        ITS:sameDominantColor ITS:RE4 ;
+        ITS:Size "195.0"^^xsd:float ,
+                 "290.0"^^xsd:float ,
+                 "56550.0"^^xsd:float ;
+        ITS:area "56550.0"^^xsd:float ;
+        ITS:bottom "635.0"^^xsd:float ;
+        ITS:center "537.5"^^xsd:float ,
+                   "995.0"^^xsd:float ;
+        ITS:centerX "995.0"^^xsd:float ;
+        ITS:centerY "537.5"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "195.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "850.0"^^xsd:float ;
+        ITS:location "1140.0"^^xsd:float ,
+                     "440.0"^^xsd:float ,
+                     "537.5"^^xsd:float ,
+                     "635.0"^^xsd:float ,
+                     "850.0"^^xsd:float ,
+                     "995.0"^^xsd:float ;
+        ITS:right "1140.0"^^xsd:float ;
+        ITS:top "440.0"^^xsd:float ;
+        ITS:width "290.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE5
+ITS:RE5 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:RE5 ;
+        ITS:sameDominantColor ITS:RE5 ;
+        ITS:Size "160.0"^^xsd:float ,
+                 "60.0"^^xsd:float ,
+                 "9600.0"^^xsd:float ;
+        ITS:area "9600.0"^^xsd:float ;
+        ITS:bottom "280.0"^^xsd:float ;
+        ITS:center "250.0"^^xsd:float ,
+                   "920.0"^^xsd:float ;
+        ITS:centerX "920.0"^^xsd:float ;
+        ITS:centerY "250.0"^^xsd:float ;
+        ITS:color "red"^^xsd:string ;
+        ITS:height "60.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "840.0"^^xsd:float ;
+        ITS:location "1000.0"^^xsd:float ,
+                     "220.0"^^xsd:float ,
+                     "250.0"^^xsd:float ,
+                     "280.0"^^xsd:float ,
+                     "840.0"^^xsd:float ,
+                     "920.0"^^xsd:float ;
+        ITS:right "1000.0"^^xsd:float ;
+        ITS:top "220.0"^^xsd:float ;
+        ITS:width "160.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE6
+ITS:RE6 rdf:type owl:NamedIndividual ,
+                 ITS:Car ,
+                 ITS:Image ,
+                 ITS:MultiWheeler ,
+                 ITS:Object ,
+                 ITS:Vehicle ,
+                 ITS:Video ;
+        ITS:description ITS:CR6 ,
+                        ITS:CR7 ,
+                        ITS:RE6 ;
+        ITS:sameDominantColor ITS:CR6 ,
+                              ITS:CR7 ,
+                              ITS:RE6 ;
+        ITS:Size "140.0"^^xsd:float ,
+                 "70.0"^^xsd:float ,
+                 "9800.0"^^xsd:float ;
+        ITS:area "9800.0"^^xsd:float ;
+        ITS:bottom "325.0"^^xsd:float ;
+        ITS:center "1205.0"^^xsd:float ,
+                   "290.0"^^xsd:float ;
+        ITS:centerX "1205.0"^^xsd:float ;
+        ITS:centerY "290.0"^^xsd:float ;
+        ITS:color "black"^^xsd:string ;
+        ITS:height "70.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "1135.0"^^xsd:float ;
+        ITS:location "1135.0"^^xsd:float ,
+                     "1205.0"^^xsd:float ,
+                     "1275.0"^^xsd:float ,
+                     "255.0"^^xsd:float ,
+                     "290.0"^^xsd:float ,
+                     "325.0"^^xsd:float ;
+        ITS:right "1275.0"^^xsd:float ;
+        ITS:top "255.0"^^xsd:float ;
+        ITS:width "140.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE7
+ITS:RE7 rdf:type owl:NamedIndividual ,
+                 ITS:Bridge ,
+                 ITS:Highway ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Video ;
+        ITS:Size "88270.0"^^xsd:float ,
+                 "91.0"^^xsd:float ,
+                 "970.0"^^xsd:float ;
+        ITS:area "88270.0"^^xsd:float ;
+        ITS:bottom "113.0"^^xsd:float ;
+        ITS:center "615.0"^^xsd:float ,
+                   "67.5"^^xsd:float ;
+        ITS:centerX "615.0"^^xsd:float ;
+        ITS:centerY "67.5"^^xsd:float ;
+        ITS:color "green"^^xsd:string ;
+        ITS:height "91.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "130.0"^^xsd:float ;
+        ITS:location "1100.0"^^xsd:float ,
+                     "113.0"^^xsd:float ,
+                     "130.0"^^xsd:float ,
+                     "22.0"^^xsd:float ,
+                     "615.0"^^xsd:float ,
+                     "67.5"^^xsd:float ;
+        ITS:right "1100.0"^^xsd:float ;
+        ITS:top "22.0"^^xsd:float ;
+        ITS:width "970.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE8
+ITS:RE8 rdf:type owl:NamedIndividual ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Sign ,
+                 ITS:Video ;
+        ITS:Size "119.0"^^xsd:float ,
+                 "79.0"^^xsd:float ,
+                 "9401.0"^^xsd:float ;
+        ITS:area "9401.0"^^xsd:float ;
+        ITS:bottom "612.0"^^xsd:float ;
+        ITS:center "125.5"^^xsd:float ,
+                   "552.5"^^xsd:float ;
+        ITS:centerX "125.5"^^xsd:float ;
+        ITS:centerY "552.5"^^xsd:float ;
+        ITS:color "white"^^xsd:string ;
+        ITS:height "119.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "86.0"^^xsd:float ;
+        ITS:location "125.5"^^xsd:float ,
+                     "165.0"^^xsd:float ,
+                     "493.0"^^xsd:float ,
+                     "552.5"^^xsd:float ,
+                     "612.0"^^xsd:float ,
+                     "86.0"^^xsd:float ;
+        ITS:right "165.0"^^xsd:float ;
+        ITS:top "493.0"^^xsd:float ;
+        ITS:width "79.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/patel/ontologies/2021/4/ITS#RE9
+ITS:RE9 rdf:type owl:NamedIndividual ,
+                 ITS:Highway ,
+                 ITS:Image ,
+                 ITS:Object ,
+                 ITS:Road ,
+                 ITS:Video ;
+        ITS:Size "1031.0"^^xsd:float ,
+                 "476.0"^^xsd:float ,
+                 "490756.0"^^xsd:float ;
+        ITS:area "490756.0"^^xsd:float ;
+        ITS:bottom "768.0"^^xsd:float ;
+        ITS:center "530.0"^^xsd:float ,
+                   "697.5"^^xsd:float ;
+        ITS:centerX "697.5"^^xsd:float ;
+        ITS:centerY "530.0"^^xsd:float ;
+        ITS:color "gray"^^xsd:string ;
+        ITS:height "476.0"^^xsd:float ;
+        ITS:image 219 ;
+        ITS:imageId 219 ;
+        ITS:left "182.0"^^xsd:float ;
+        ITS:location "1213.0"^^xsd:float ,
+                     "182.0"^^xsd:float ,
+                     "292.0"^^xsd:float ,
+                     "530.0"^^xsd:float ,
+                     "697.5"^^xsd:float ,
+                     "768.0"^^xsd:float ;
+        ITS:right "1213.0"^^xsd:float ;
+        ITS:top "292.0"^^xsd:float ;
+        ITS:width "1031.0"^^xsd:float .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ITS:Animal
+                ITS:Highway
+                ITS:Item
+                ITS:Light
+                ITS:Person
+                ITS:Pole
+                ITS:Sky
+                ITS:Street
+                ITS:TrafficSign
+                ITS:TrafficSignal
+                ITS:Vegetation
+                ITS:Vehicle
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ITS:Bagpack
+                ITS:Handbag
+                ITS:Skateboard
+                ITS:Umbrella
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ITS:Barrier
+                ITS:Bridge
+                ITS:BustStop
+                ITS:Parking
+                ITS:RailwayTrack
+                ITS:Road
+                ITS:Tunnel
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ITS:Bench
+                ITS:Building
+                ITS:Fence
+                ITS:Roadside
+                ITS:Sidewalk
+                ITS:Store
+                ITS:Wall
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ITS:Bus
+                ITS:Car
+                ITS:Caravan
+                ITS:Trailer
+                ITS:Train
+                ITS:Tram
+                ITS:Truck
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ITS:Cat
+                ITS:Cow
+                ITS:Dog
+                ITS:Elephant
+                ITS:Horse
+                ITS:Sheep
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ITS:GreenLight
+                ITS:Off
+                ITS:RedLight
+                ITS:YellowLight
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:o1 rdf:type swrl:Variable .
+
+:o2 rdf:type swrl:Variable .
+
+:c1 rdf:type swrl:Variable .
+
+:c2 rdf:type swrl:Variable .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "color"^^xsd:string ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate ITS:Car ;
+                           swrl:argument1 :o1
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate ITS:Car ;
+                                      swrl:argument1 :o2
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate ITS:color ;
+                                                 swrl:argument1 :o1 ;
+                                                 swrl:argument2 :c1
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate ITS:color ;
+                                                            swrl:argument1 :o2 ;
+                                                            swrl:argument2 :c2
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                       swrl:builtin swrlb:equal ;
+                                                                       swrl:arguments ( :c1
+                                                                                        :c2
+                                                                                      )
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate ITS:sameDominantColor ;
+                           swrl:argument1 :o1 ;
+                           swrl:argument2 :o2
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
